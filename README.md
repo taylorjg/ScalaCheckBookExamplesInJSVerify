@@ -14,3 +14,5 @@ Below is a list of examples that I have ported so far:
 
 * http://booksites.artima.com/scalacheck
 * http://booksites.artima.com/scalacheck/ScalaCheckExamples.zip
+* http://jsverify.github.io/
+* https://github.com/jsverify/jsverify#documentation

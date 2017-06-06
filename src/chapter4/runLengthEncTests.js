@@ -9,7 +9,7 @@ describe('run length encoding', () => {
     const rleList = size => {
         if (size <= 1) return [rleItem.generator(size)];
         const tail = rleList(size - 1);
-        const [[, c1], ] = tail;
+        const [[, c1],] = tail;
         const head = jsc.suchthat(rleItem, ([, c2]) => c2 !== c1).generator(size);
         const result = [head, ...tail];
         return result;
