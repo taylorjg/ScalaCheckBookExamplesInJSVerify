@@ -1,13 +1,19 @@
 {
-    "extends": ["eslint:recommended"],
+    "extends": [
+        "eslint:recommended"
+    ],
     "parserOptions": {
         "sourceType": "module"
     },
     "env": {
+        "node": true,
         "es6": true
     },
     "rules": {
-        "semi": [2, "always"],
+        "semi": [
+            2,
+            "always"
+        ],
         "no-console": 0
     }
 }

@@ -1,18 +1,16 @@
 export const runLengthEnc = function* (xs) {
-    let currTuple = null;
-    for (const x of xs) {
-        if (!currTuple) {
-            currTuple = [1, x];
-            continue;
+    const loop = function* (iter, currTuple) {
+        const { value, done } = iter.next();
+        if (done) return currTuple ? yield currTuple : undefined;
+        if (currTuple) {
+            const [count, previousValue] = currTuple;
+            if (value === previousValue) return yield* loop(iter, [count + 1, value]);
+            yield currTuple;
         }
-        if (currTuple[1] === x) {
-            currTuple[0]++;
-            continue;
-        }
-        yield currTuple;
-        currTuple = [1, x];
-    }
-    if (currTuple) yield currTuple;
+        yield* loop(iter, [1, value]);
+    };
+    const iter = xs[Symbol.iterator]();
+    yield* loop(iter);
 };
 
 export const runLengthDec = function* (r) {
