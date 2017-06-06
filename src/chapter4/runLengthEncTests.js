@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import jsc from 'jsverify';
-import { runLengthEnc, runLengthDec } from '../../src/chapter4/runLengthEnc';
+import { runLengthEnc, runLengthDec } from './runLengthEnc';
 
 describe('run length encoding', () => {
 
