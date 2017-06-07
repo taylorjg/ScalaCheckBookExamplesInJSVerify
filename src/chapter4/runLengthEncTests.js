@@ -26,5 +26,7 @@ describe('run length encoding', () => {
         return jsc.utils.isApproxEqual(encoded, r);
     };
 
-    jsc.property('round-trip property test', arb, roundTrip);
+    it('round-trip property test', () => {
+        jsc.check(jsc.forall(arb, roundTrip));
+    });
 });
