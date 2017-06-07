@@ -4,7 +4,8 @@ import { runLengthEnc, runLengthDec } from './runLengthEnc';
 
 describe('run length encoding', () => {
 
-    const rleItem = jsc.tuple([jsc.integer(1, 20), jsc.asciichar]);
+    const alphaNumChar = jsc.suchthat(jsc.asciichar, ch => /[A-Za-z0-9]/.test(ch));
+    const rleItem = jsc.tuple([jsc.integer(1, 20), alphaNumChar]);
 
     const rleList = size => {
         if (size <= 1) return [rleItem.generator(size)];
