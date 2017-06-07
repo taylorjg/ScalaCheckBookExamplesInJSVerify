@@ -16,7 +16,10 @@ describe('run length encoding', () => {
         return result;
     };
 
-    const arb = jsc.bless({ generator: rleList });
+    const arb = jsc.bless({
+        generator: rleList,
+        shrink: a => jsc.shrink.array(rleItem.shrink)(a)
+    });
 
     const roundTrip = r => {
         const decoded = Array.from(runLengthDec(r));
