@@ -1,4 +1,5 @@
 export const runLengthEnc = function* (xs) {
+    // Is it possible to trampoline a (recursive) generator ???
     const loop = function* (iter, currTuple) {
         const { value, done } = iter.next();
         if (done) return currTuple ? yield currTuple : undefined;
