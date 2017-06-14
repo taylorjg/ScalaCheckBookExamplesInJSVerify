@@ -27,6 +27,6 @@ describe('run length encoding', () => {
     };
 
     it('round-trip property test', () => {
-        jsc.check(jsc.forall(arb, roundTrip));
+        return jsc.check(jsc.forall(arb, roundTrip));
     });
 });
