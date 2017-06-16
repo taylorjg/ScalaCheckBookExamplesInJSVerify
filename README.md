@@ -12,15 +12,20 @@ Below is a list of examples that I have ported so far:
 * Chapter 5
     * [Labelling properties - interleaving](src/chapter5/Interleaving) (pages 51-52)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec1))
-    * [Collecting test statistics - Classify](src/chapter5/classifyingTestStatistics.js) (page 56)
-        * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec1))
-    * [Collecting test statistics - Collect](src/chapter5/collectingTestStatistics.js) (page 57)
-        * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec1))
-    * [Prop.throws](src/chapter5/throws.js) (page 59)
-        * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec2))
-    * [Constant properties](src/chapter5/constantProperties.js)  (page 61)
+    * [Prop.throws](src/chapter5/throwsTests.js) (page 59)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec2))
      
+## Missing Features
+
+JSVerify doesn't appear to have any of the following features (opportunities for pull requests!):
+
+* `sized`
+* equality operator: `=?`, `?=`
+* labelling operator: `:|`, `|:`
+* collection of statistics: `collect`, `classify`
+* constant properties: `undecided`, `falsified`, `proved`, `passed`, `exception`
+* implication operator: `==>`
+
 ## Links
 
 * http://booksites.artima.com/scalacheck

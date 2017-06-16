@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Port of the examples in the ScalaCheck book to JavaScript and JSVerify",
   "scripts": {
-    "test": "mocha --compilers js:babel-register ./src/**/*Tests.js"
+    "test": "mocha --compilers js:babel-register './src/**/*Tests.js'"
   },
   "author": "Jonathan Taylor",
   "license": "MIT",
