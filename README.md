@@ -19,14 +19,16 @@ Below is a list of examples that I have ported so far:
 
 JSVerify doesn't appear to have any of the following features (opportunities for pull requests!):
 
-* `sized`
-* equality operator: `=?`, `?=`
-* labelling operator: `:|`, `|:`
-* and operator: `&&`
-* or operator: `||`
-* collection of statistics: `collect`, `classify`
-* constant properties: `undecided`, `falsified`, `proved`, `passed`, `exception`
-* implication operator: `==>`
+* [`sized`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@sized[T](f:Int=>org.scalacheck.Gen[T]):org.scalacheck.Gen[T])
+* equality operator: [`=?`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@=?[T](x:T,y:T)(implicitpp:T=>org.scalacheck.util.Pretty):org.scalacheck.Prop), [`?=`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@?=[T](x:T,y:T)(implicitpp:T=>org.scalacheck.util.Pretty):org.scalacheck.Prop)
+* labelling operator: [`:|`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@:|(l:String):org.scalacheck.Prop), [`|:`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@|:(l:String):org.scalacheck.Prop)
+* and operator: [`&&`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@&&(p:=>org.scalacheck.Prop):org.scalacheck.Prop)
+* or operator: [`||`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@||(p:=>org.scalacheck.Prop):org.scalacheck.Prop)
+* collection of statistics: [`collect`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@collect[T](t:T)(prop:org.scalacheck.Prop):org.scalacheck.Prop), [`classify`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@classify(c:=>Boolean,ifTrue:Any)(prop:org.scalacheck.Prop):org.scalacheck.Prop)
+* constant properties: [`undecided`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@undecided:org.scalacheck.Prop), [`falsified`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@falsified:org.scalacheck.Prop), [`proved`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@proved:org.scalacheck.Prop), [`passed`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@passed:org.scalacheck.Prop), [`exception`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@exception:org.scalacheck.Prop)
+* implication operator: [`==>`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@==>(p:=>org.scalacheck.Prop):org.scalacheck.Prop)
+* [`listOfN`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@listOfN[T](n:Int,g:org.scalacheck.Gen[T]):org.scalacheck.Gen[List[T]])
+* [`frequency`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@frequency[T](gs:(Int,org.scalacheck.Gen[T])*):org.scalacheck.Gen[T])
 
 ## Links
 
