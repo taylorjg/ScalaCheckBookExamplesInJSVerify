@@ -10,7 +10,7 @@ Below is a list of examples that I have ported so far:
     * [Constructing optimal output - run length encoding](https://github.com/taylorjg/ScalaCheckBookExamplesInJSVerify/tree/master/src/chapter4) (pages 45-46)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch04.html#sec6))
 * Chapter 5
-    * [Labelling properties - interleaving](https://github.com/taylorjg/ScalaCheckBookExamplesInJSVerify/tree/master/ScalaCheckBookExamplesInFsCheck2/chapter5) (pages 51-52)
+    * [Labelling properties - interleaving](https://github.com/taylorjg/ScalaCheckBookExamplesInJSVerify/tree/master/ScalaCheckBookExamplesInFsCheck2/chapter5/Interleaving) (pages 51-52)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec1))
     * [Collecting test statistics - Classify](https://github.com/taylorjg/ScalaCheckBookExamplesInJSVerify/blob/master/ScalaCheckBookExamplesInFsCheck2/chapter5/classifyingTestStatistics.js) (page 56)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec1))
