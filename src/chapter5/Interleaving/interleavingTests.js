@@ -10,7 +10,7 @@ describe('interleave', () => {
         }));
     });
 
-    it('property test (with bug)', () => {
+    it('property test (with deliberate bug)', () => {
         return jsc.assert(jsc.forall("[nat]", "[nat]", (xs, ys) => {
             const res = interleaveWithBug(xs, ys);
             return res.length === xs.length + ys.length;

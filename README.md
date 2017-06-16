@@ -14,7 +14,10 @@ Below is a list of examples that I have ported so far:
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec1))
     * [Prop.throws](src/chapter5/throwsTests.js) (page 59)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec2))
-     
+* Chapter 6
+    * [Higher-order generators](src/chapter6/higherOrderGeneratorsTests.cs) (pages 68-70)  
+        * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch06.html#sec1))
+
 ## Missing Features
 
 JSVerify doesn't appear to have any of the following features (opportunities for pull requests!):
