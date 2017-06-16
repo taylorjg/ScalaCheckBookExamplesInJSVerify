@@ -26,6 +26,6 @@ describe('run length encoding', () => {
             const encoded = Array.from(runLengthEnc(decoded));
             return jsc.utils.isApproxEqual(encoded, r);
         };
-        return jsc.checkForall(arb, prop);
+        return jsc.assert(jsc.forall(arb, prop));
     });
 });

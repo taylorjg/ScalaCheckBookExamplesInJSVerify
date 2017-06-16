@@ -1,8 +1,8 @@
-import 'babel-polyfill';
 import jsc from 'jsverify';
 
 describe('throws', () => {
 
+    // Dividing by zero in JavaScript results in Infinity rather than an exception.
     // https://stackoverflow.com/questions/8072323/best-way-to-prevent-handle-divide-by-0-in-javascript/8072369#8072369
     function notZero(n) {
         n = +n;  // Coerce to number.
@@ -13,6 +13,6 @@ describe('throws', () => {
     }
 
     it('property test', () => {
-        return jsc.checkForall("nat", n => jsc.throws(() => n / notZero(0)));
+        return jsc.assert(jsc.forall("nat", n => jsc.throws(() => n / notZero(0))));
     });
 });

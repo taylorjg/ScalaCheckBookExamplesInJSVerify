@@ -22,6 +22,8 @@ JSVerify doesn't appear to have any of the following features (opportunities for
 * `sized`
 * equality operator: `=?`, `?=`
 * labelling operator: `:|`, `|:`
+* and operator: `&&`
+* or operator: `||`
 * collection of statistics: `collect`, `classify`
 * constant properties: `undecided`, `falsified`, `proved`, `passed`, `exception`
 * implication operator: `==>`
