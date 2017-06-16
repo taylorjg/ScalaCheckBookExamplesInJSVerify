@@ -20,13 +20,12 @@ describe('run length encoding', () => {
         shrink: a => jsc.shrink.array(rleItem.shrink)(a)
     });
 
-    const roundTrip = r => {
-        const decoded = Array.from(runLengthDec(r));
-        const encoded = Array.from(runLengthEnc(decoded));
-        return jsc.utils.isApproxEqual(encoded, r);
-    };
-
-    it('round-trip property test', () => {
-        return jsc.check(jsc.forall(arb, roundTrip));
+    it('property test', () => {
+        const prop = r => {
+            const decoded = Array.from(runLengthDec(r));
+            const encoded = Array.from(runLengthEnc(decoded));
+            return jsc.utils.isApproxEqual(encoded, r);
+        };
+        return jsc.check(jsc.forall(arb, prop));
     });
 });
