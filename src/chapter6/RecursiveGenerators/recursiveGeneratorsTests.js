@@ -19,8 +19,8 @@ describe('recursive generators', () => {
 
     const arbNode = arb => jsc.bless({
         generator: function(size) {
-            const gen = arb.generator.map(n => new Node([new Leaf(n), new Leaf(n), new Leaf(n)]));
-            return gen(size);
+            const children = jsc.array(arb).generator(size).map(x => new Leaf(x));
+            return new Node(children);
         }
     });
 
@@ -36,6 +36,6 @@ describe('recursive generators', () => {
 //     return Gen.Sized(size =>
 //         from s in Gen.Choose(0, size)
 //         let g = Gen.Resize(size / (s + 1), GenTree(genT))
-//         from children in Gen.ListOf(s, g).Select(fsharpList => fsharpList.ToList())
+//         from children in Gen.ListOf(s, g)
 //         select new Node<T>(children) as Tree<T>);
 // }
