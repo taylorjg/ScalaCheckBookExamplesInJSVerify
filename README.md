@@ -17,7 +17,7 @@ Below is a list of examples that I have ported so far:
 * Chapter 6
     * [Higher-order generators](src/chapter6/higherOrderGeneratorsTests.js) (pages 68-70)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch06.html#sec1))
-    * [Recursive generators](src/Chapter6/RecursiveGenerators) (pages 78-82)
+    * [Recursive generators](src/chapter6/RecursiveGenerators) (pages 78-82)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch06.html#sec1))
 
 ## Missing Features
