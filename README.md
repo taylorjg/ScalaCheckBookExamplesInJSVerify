@@ -15,7 +15,9 @@ Below is a list of examples that I have ported so far:
     * [Prop.throws](src/chapter5/throwsTests.js) (page 59)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch05.html#sec2))
 * Chapter 6
-    * [Higher-order generators](src/chapter6/higherOrderGeneratorsTests.js) (pages 68-70)  
+    * [Higher-order generators](src/chapter6/higherOrderGeneratorsTests.js) (pages 68-70)
+        * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch06.html#sec1))
+    * [Recursive generators](src/Chapter6/RecursiveGenerators) (pages 78-82)
         * (_original example code_ can be found within [here](http://booksites.artima.com/scalacheck/examples/html/ch06.html#sec1))
 
 ## Missing Features
@@ -23,6 +25,7 @@ Below is a list of examples that I have ported so far:
 JSVerify doesn't appear to have any of the following features (opportunities for pull requests!):
 
 * [`sized`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@sized[T](f:Int=>org.scalacheck.Gen[T]):org.scalacheck.Gen[T])
+* [`resize`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@resize[T](s:Int,g:org.scalacheck.Gen[T]):org.scalacheck.Gen[T])
 * equality operator: [`=?`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@=?[T](x:T,y:T)(implicitpp:T=>org.scalacheck.util.Pretty):org.scalacheck.Prop), [`?=`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop$@?=[T](x:T,y:T)(implicitpp:T=>org.scalacheck.util.Pretty):org.scalacheck.Prop)
 * labelling operator: [`:|`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@:|(l:String):org.scalacheck.Prop), [`|:`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@|:(l:String):org.scalacheck.Prop)
 * and operator: [`&&`](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Prop@&&(p:=>org.scalacheck.Prop):org.scalacheck.Prop)

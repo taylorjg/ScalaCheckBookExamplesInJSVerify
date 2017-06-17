@@ -1,31 +1,12 @@
 import jsc from 'jsverify';
+import { frequency, sample } from '../extras';
 
 describe('higher order generators', () => {
-
-    const sample = arb => {
-        const sampler = jsc.sampler(arb);
-        const samples = sampler(10);
-        samples.forEach((sample, index) => console.log(`samples[${index}]: ${samples[index]}`));
-    };
 
     it('jsc.tuple (Gen.sequence)', () => {
         const numbers = jsc.tuple([jsc.integer(1, 10), jsc.constant(20), jsc.constant(30)]);
         sample(numbers);
     });
-
-    const frequency = (xs0) => {
-        if (xs0.length === 0) {
-            throw new Error('frequency used with empty list');
-        }
-        return jsc.bless({
-            generator: function (size) {
-                const tot = xs0.reduce((acc, [f]) => acc + f, 0);
-                const pick = (n, [[k, x], ...xs]) => n <= k ? x : pick(n - k, xs);
-                const gen = jsc.integer(1, tot).generator.flatMap(n => pick(n, xs0).generator);
-                return gen(size);
-            }
-        });
-    };
 
     it('custom frequency combinator (Gen.frequency)', () => {
         const evenNumbersGen = jsc.bless({

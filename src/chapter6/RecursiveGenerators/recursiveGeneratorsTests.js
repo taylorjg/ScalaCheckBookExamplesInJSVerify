@@ -1,26 +1,20 @@
-import 'babel-polyfill';
 import jsc from 'jsverify';
+import { sample } from '../../extras';
 import { Leaf, Node } from './recursiveGenerators';
 
 describe('recursive generators', () => {
 
-    const sample = arb => {
-        const sampler = jsc.sampler(arb);
-        const samples = sampler(10);
-        samples.forEach((sample, index) => console.log(`samples[${index}]: ${samples[index]}`));
-    };
-
     const arbLeaf = arb => jsc.bless({
         generator: function(size) {
-            const gen = arb.generator.map(n => new Leaf(n));
+            const gen = arb.generator.map(item => new Leaf(item));
             return gen(size);
         }
     });
 
     const arbNode = arb => jsc.bless({
         generator: function(size) {
-            const children = jsc.array(arb).generator(size).map(x => new Leaf(x));
-            return new Node(children);
+            const gen = jsc.array(arbTree(arb)).generator.map(children => new Node(children));
+            return gen(size);
         }
     });
 
@@ -28,14 +22,6 @@ describe('recursive generators', () => {
 
     it('property test', () => {
         sample(arbTree(jsc.nat));
+        sample(arbTree(jsc.asciinestring));
     });
 });
-
-// private static Gen<Tree<T>> GenNode<T>(Gen<T> genT)
-// {
-//     return Gen.Sized(size =>
-//         from s in Gen.Choose(0, size)
-//         let g = Gen.Resize(size / (s + 1), GenTree(genT))
-//         from children in Gen.ListOf(s, g)
-//         select new Node<T>(children) as Tree<T>);
-// }
